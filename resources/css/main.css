@@ -2,19 +2,35 @@
 :root {
   --main-white: #f0f0f0;
   --main-red: #be3144;
-  --main-blue-dark: #003a54;
+  --main-blue-dark: #1b3b6f;
   --main-blue-light: #427aa1;
 }
 
 html {
   font-family: Oxygen, sans-serif;
-  background-color: var(--main-blue-dark);
   color: var(--main-white);
 }
 
-#navbar {
+body {
+  padding: 0;
+  margin: 0;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: #9eb3c2;
+  text-decoration: none;
+}
+
+#navbar {
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }
 
 .nav-list {
@@ -32,10 +48,6 @@ html {
   color: var(--main-blue);
 }
 
-a {
-  color: var(--main-red);
-}
-
 #welcome-section {
   display: flex;
   flex-direction: column;
@@ -43,6 +55,7 @@ a {
   align-items: center;
   width: 100vw;
   height: 100vh;
+  background-color: #21295c;
 }
 
 #welcome-section h1 {
@@ -58,11 +71,19 @@ a {
 h2 {
   display: flex;
   justify-content: center;
-  font-size: 3vw;
+  font-size: 3.5vw;
+}
+
+#about-me {
+  background-color: #1b3b6f;
 }
 
 #about-me-content {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 85vh;
 }
 
 #about-me-content img {
@@ -72,5 +93,38 @@ h2 {
 }
 
 #about-me-content p {
-  margin: auto;
+  font-size: 2vw;
+  margin: 50px;
+  text-align: center;
+}
+
+#projects {
+  background-color: #065a82;
+}
+
+#contact {
+  background-color: #1c7293;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vw;
+  margin-top: 0px;
+}
+
+.contact-links img {
+  width: 3vw;
+  margin-right: 0.5vw;
+}
+
+.contact-links a {
+  margin-left: 2vw;
+}
+
+footer {
+  text-align: center;
+  background-color: #1c7293;
+  color: #9eb3c2;
 }
