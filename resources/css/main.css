@@ -18,10 +18,6 @@ body {
   flex-direction: column;
 }
 
-ul {
-  list-style-type: none;
-}
-
 a {
   color: #9eb3c2;
   text-decoration: none;
@@ -42,10 +38,13 @@ a {
   display: block;
   font-size: 1.5vw;
   padding: 1vh;
+  padding-left: 5vw;
+  position: relative;
+  cursor: pointer;
 }
 
 .nav-list a:hover {
-  color: var(--main-blue);
+  color: #9eb3c2;
 }
 
 #welcome-section {
@@ -112,6 +111,8 @@ h2 {
   align-items: center;
   font-size: 3vw;
   margin-top: 0px;
+  position: relative;
+  cursor: pointer;
 }
 
 .contact-links img {
@@ -120,11 +121,43 @@ h2 {
 }
 
 .contact-links a {
-  margin-left: 2vw;
+  margin-right: 7vw;
+  padding-left: 5vw;
+  position: relative;
+  cursor: pointer;
 }
 
 footer {
   text-align: center;
   background-color: #1c7293;
   color: #9eb3c2;
+  font-size: 1.1vw;
+}
+
+/* animations */
+
+div.brackets a:before,
+div.brackets a:after {
+  position: absolute;
+  opacity: 0;
+  font-size: 2.3vw;
+  top: 0px;
+  transition: all 0.3s;
+}
+
+div.brackets a:before {
+  content: "<";
+  left: 3.5vw;
+  transform: translateX(10px);
+}
+
+div.brackets a:after {
+  content: "/>";
+  transform: translateX(-10px);
+}
+
+div.brackets a:hover:before,
+div.brackets a:hover:after {
+  opacity: 1;
+  transform: translateX(0px);
 }
