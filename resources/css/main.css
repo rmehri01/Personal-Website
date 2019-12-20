@@ -58,7 +58,7 @@ a {
   background-color: #21295c;
 }
 
-#welcome-section h1 {
+h1 {
   font-size: 5vw;
   margin: 0px;
   z-index: 0;
@@ -91,8 +91,7 @@ h2 {
 #about-me-content img {
   border-radius: 50%;
   display: block;
-  width: 100%;
-  max-width: 100%;
+  width: 40%;
   height: auto;
   order: 2;
   margin: 1% 5% 5% 5%;
@@ -103,9 +102,7 @@ h2 {
   padding: 2%;
   margin: 5%;
   margin-right: 0px;
-  width: auto;
-  max-width: 100%;
-  height: auto;
+  width: 75vw;
   text-align: center;
   z-index: 0;
 }
@@ -217,8 +214,8 @@ div.brackets a:before,
 div.brackets a:after {
   position: absolute;
   opacity: 0;
-  font-size: 2.3vw;
   top: 0px;
+  font-size: 2.3vw;
   transition: all 0.3s;
 }
 
@@ -271,4 +268,61 @@ span {
 
 .pullUpHigher:hover:before {
   height: 80%;
+}
+
+@media (max-width: 350px) {
+  .nav-list a {
+    font-size: 5vw;
+  }
+
+  div.brackets a:before,
+  div.brackets a:after {
+    font-size: 5vw;
+    top: 3px;
+  }
+
+  div.brackets a:before {
+    left: 2vw;
+  }
+
+  h1 {
+    font-size: 12vw;
+  }
+
+  h2 {
+    font-size: 8vw;
+  }
+
+  #welcome-section p {
+    font-size: 6.5vw;
+    text-align: center;
+  }
+
+  #about-me-content {
+    flex-direction: column;
+  }
+
+  #about-me-content div {
+    font-size: 5vw;
+  }
+
+  #projects-list p {
+    font-size: 4vw;
+  }
+
+  #projects-list h3 {
+    font-size: 5vw;
+  }
+
+  #projects-list .card {
+    width: 80%;
+  }
+
+  .contact-links {
+    font-size: 5vw;
+  }
+
+  .contact-links img {
+    width: 5vw;
+  }
 }
