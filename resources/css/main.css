@@ -91,8 +91,8 @@ h2 {
 #about-me-content img {
   border-radius: 50%;
   display: block;
-  width: 75%;
-  height: 75%;
+  width: 100%;
+  height: auto;
   order: 2;
   margin: 1% 5% 5% 5%;
 }
@@ -268,12 +268,4 @@ span {
 
 .pullUpHigher:hover:before {
   height: 80%;
-}
-
-/* mobile design */
-
-@media (max-width: 350px) {
-  h1 {
-    font-size: 80vw;
-  }
 }
