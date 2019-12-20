@@ -7,8 +7,9 @@
 }
 
 html {
-  font-family: Oxygen, sans-serif;
+  font-family: "Titillium Web", sans-serif;
   color: var(--main-white);
+  scroll-behavior: smooth;
 }
 
 body {
@@ -84,23 +85,46 @@ h2 {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 85vh;
+  height: 70vh;
 }
 
 #about-me-content img {
   border-radius: 50%;
   width: 100vw;
   order: 2;
+  margin: 10px 50px 50px 50px;
 }
 
-#about-me-content p {
+#about-me-content div {
   font-size: 2vw;
+  padding: 20px;
   margin: 50px;
+  margin-right: 0px;
+  width: 175vw;
   text-align: center;
   z-index: 0;
 }
 
 #projects {
+  background-color: #065a82;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 70vh;
+}
+
+#projects-list h3 {
+  font-size: 2vw;
+}
+
+#projects-list p {
+  font-size: 1.5vw;
+  z-index: 0;
+}
+
+#projects-list .card {
   background-color: #065a82;
 }
 
@@ -139,6 +163,47 @@ footer {
 
 /* animations */
 
+.card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 1);
+}
+
+.card {
+  position: relative;
+  display: inline-block;
+  border-radius: 5px;
+  width: 50vw;
+  height: 23vw;
+  background-color: #1b3b6f;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card::after {
+  content: "";
+  border-radius: 5px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card:hover {
+  -webkit-transform: scale(1.07, 1.07);
+  transform: scale(1.07, 1.07);
+}
+
+.card:hover::after {
+  opacity: 1;
+}
+
 div.brackets a:before,
 div.brackets a:after {
   position: absolute;
@@ -167,6 +232,7 @@ div.brackets a:hover:after {
 
 span {
   position: relative;
+  z-index: 0;
 }
 
 .pullUp:before {
@@ -188,4 +254,12 @@ span {
 .pullUp:hover:before {
   height: 100%;
   z-index: -1;
+}
+
+.pullUpHigher:before {
+  bottom: 15%;
+}
+
+.pullUpHigher:hover:before {
+  height: 80%;
 }
