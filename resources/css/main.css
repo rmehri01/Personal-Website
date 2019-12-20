@@ -182,6 +182,7 @@ footer {
   background-color: #1b3b6f;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  padding: 2%;
   -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -257,6 +258,8 @@ span {
   z-index: -1;
 }
 
+/* underline breaks across multiple lines !!! */
+
 .pullUp:hover:before {
   height: 100%;
   z-index: -1;
@@ -304,6 +307,9 @@ span {
 
   #about-me-content div {
     font-size: 5vw;
+    width: 80vw;
+    margin: 0;
+    margin-bottom: 15px;
   }
 
   #projects-list p {
