@@ -60,11 +60,13 @@ a {
 #welcome-section h1 {
   font-size: 5vw;
   margin: 0px;
+  z-index: 0;
 }
 
 #welcome-section p {
   font-size: 2vw;
   margin: 0px;
+  z-index: 0;
 }
 
 h2 {
@@ -95,6 +97,7 @@ h2 {
   font-size: 2vw;
   margin: 50px;
   text-align: center;
+  z-index: 0;
 }
 
 #projects {
@@ -160,4 +163,29 @@ div.brackets a:hover:before,
 div.brackets a:hover:after {
   opacity: 1;
   transform: translateX(0px);
+}
+
+span {
+  position: relative;
+}
+
+.pullUp:before {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0px;
+  bottom: 0px;
+  content: "";
+  background: linear-gradient(
+    90deg,
+    rgba(197, 4, 247, 1) 0%,
+    rgba(255, 130, 0, 1) 100%
+  );
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.pullUp:hover:before {
+  height: 100%;
+  z-index: -1;
 }
