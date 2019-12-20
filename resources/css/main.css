@@ -270,7 +270,7 @@ span {
   height: 80%;
 }
 
-@media (max-width: 350px) {
+@media (max-width: 768px) {
   .nav-list a {
     font-size: 5vw;
   }
