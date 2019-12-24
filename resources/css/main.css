@@ -259,27 +259,6 @@ span {
   background-size: 100% 100%;
 }
 
-.pullUp:before {
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  left: 0px;
-  bottom: 0px;
-  content: "";
-  background: linear-gradient(
-    90deg,
-    rgba(197, 4, 247, 1) 0%,
-    rgba(255, 130, 0, 1) 100%
-  );
-  transition: all 0.3s;
-  z-index: -1;
-}
-
-.pullUp:hover:before {
-  height: 100%;
-  z-index: -1;
-}
-
 .pullUpHigher:before {
   position: absolute;
   width: 100%;
