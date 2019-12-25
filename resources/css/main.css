@@ -57,12 +57,16 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 5vw;
   width: 100vw;
   height: 100vh;
   background-color: #21295c;
   background-image: url("../img/WelcomePage.jpg");
+  background-repeat: no-repeat;
   background-size: 100vw 100vh;
+}
+
+.welcome-content {
+  padding-left: 5vw;
 }
 
 h1 {
