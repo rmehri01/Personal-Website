@@ -61,6 +61,8 @@ a {
   height: 100vh;
   background-color: #21295c;
   background-image: url("../img/WelcomePage.jpg");
+  background-attachment: fixed;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: 100vw 100vh;
 }
