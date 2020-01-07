@@ -162,7 +162,6 @@ h2 {
   margin-right: 0px;
   width: 75vw;
   text-align: center;
-  z-index: 0;
 }
 
 #projects {
@@ -226,47 +225,30 @@ footer {
   font-size: 1.1vw;
 }
 
-/* animations */
-
-.card:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 15px 0 rgba(0, 0, 0, 1);
-}
-
 .card {
   position: relative;
   display: inline-block;
-  border-radius: 5px;
   width: 50%;
   background-color: #1b3b6f;
-  border-radius: 10px;
   padding: 2%;
-  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  text-align: center;
 }
 
-.card::after {
+/* animations */
+
+.card::before {
   content: "";
-  border-radius: 5px;
   position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    90deg,
+    rgba(197, 4, 247, 1) 0%,
+    rgba(255, 130, 0, 1) 100%
+  );
+  transform: skew(2deg, 2deg);
   z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-  opacity: 0;
-  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.card:hover {
-  -webkit-transform: scale(1.03, 1.03);
-  transform: scale(1.03, 1.03);
-}
-
-.card:hover::after {
-  opacity: 1;
 }
 
 div.brackets a:before,
@@ -355,39 +337,6 @@ span {
     left: 5px;
     opacity: 0;
   }
-}
-
-@-webkit-keyframes fadeInUp {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.fadeInUp {
-  -webkit-animation-name: fadeInUp;
-  animation-name: fadeInUp;
 }
 
 /* mobile */
