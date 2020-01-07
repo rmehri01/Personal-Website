@@ -8,7 +8,7 @@
 
 html {
   font-family: "Titillium Web", sans-serif;
-  color: var(--main-white);
+  color: white;
   scroll-behavior: smooth;
   max-width: 100%;
   overflow-x: hidden;
@@ -231,6 +231,14 @@ footer {
   width: 50%;
   background-color: #1b3b6f;
   padding: 2%;
+}
+
+#welcome-section {
+  text-shadow: 0.15em 0.15em black;
+}
+
+h2 {
+  text-shadow: 0.1em 0.1em black;
 }
 
 /* animations */
