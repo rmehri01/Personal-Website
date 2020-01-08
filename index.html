@@ -20,12 +20,14 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
     <script>
         AOS.init();
     </script>
+
     <nav id="navbar">
         <div class="nav-list brackets">
             <a href="#about-me">About</a>
@@ -36,6 +38,15 @@
     </nav>
 
     <section id="welcome-section">
+        <script>
+            // Jump to Bio
+            $("#welcome-section").click(function () {
+                $('html,body').animate({
+                    scrollTop: $("#about-me").offset().top
+                },
+                    duration = 1000);
+            });
+        </script>
         <div class="welcome-content">
             <h1 class="animated fadeInUp">
                 Hi, I'm <span class="pullUpHigher">Ryan</span>
