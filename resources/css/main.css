@@ -179,7 +179,7 @@ h2 {
 }
 
 #projects-list a {
-  color: var(--main-white);
+  color: white;
 }
 
 #projects-list p {
@@ -190,6 +190,11 @@ h2 {
 #projects-list .card {
   background-color: #065a82;
   margin: 5%;
+}
+
+#projects-list .technologies {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1.3vw;
 }
 
 #contact {
