@@ -194,7 +194,7 @@ h2 {
 
 #projects-list .technologies {
   font-family: "IBM Plex Mono", monospace;
-  font-size: 1.3vw;
+  font-size: 1.4vw;
 }
 
 #contact {
@@ -408,6 +408,10 @@ span {
 
   #projects-list p {
     font-size: 4vw;
+  }
+
+  #projects-list .technologies {
+    font-size: 3.7vw;
   }
 
   #projects-list h3 {
